@@ -23,7 +23,7 @@ def exec_code():
   checker = req["checker"]
   hash = sha512((keycode+req["time"]).encode()).hexdigest()
   if checker!=hash:
-    return jsonify({ "res": "IE", "judge_message": "IE: wrong exec keycode." })
+    return jsonify({ "res": "IE", "judge_message": "IE: wrong exec keycode."+req["checker"]+' '+keycode+req["time"] })
   code = req["code"]
   code_name = req["code_name"]
   file_name = req["file_name"]

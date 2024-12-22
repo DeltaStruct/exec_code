@@ -1,12 +1,12 @@
 from flask import Flask,request,jsonify
-from flask_cors import Cors
+from flask_cors import CORS
 from hashlib import sha512
 import subprocess
 import os
 
 app = Flask("server.py")
 
-cors = Cors(app,resource={
+cors = CORS(app,resource={
   "/ping": {},
   "/exec_code": {}
 })

@@ -32,7 +32,7 @@ def exec_code():
   compile_code = req["compile_code"]
   exec_code = req["exec_code"]
   stdin = req["stdin"]
-  dir = subprocess.run("mktemp -d execXXXXXX",shell=True,encoding="UTF-8",stdout=subprocess.PIPE).stdout
+  dir = subprocess.run("mktemp -d execXXXXXX | tr -d '\n'",shell=True,encoding="UTF-8",stdout=subprocess.PIPE).stdout
   with open(dir+'/'+code_name,mode='w') as f:
     f.write(code)
   res = subprocess.run("cd "+dir+" ; "+compile_code,shell=True,encoding="UTF-8",stdout=subprocess.PIPE,stderr=subprocess.PIPE,timeout=compile_timeout)

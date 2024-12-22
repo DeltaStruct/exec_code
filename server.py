@@ -39,8 +39,10 @@ def exec_code():
     f.write(code)
   res = subprocess.run("cd "+dir+" ; "+compile_code,shell=True,encoding="UTF-8",stdout=subprocess.PIPE,stderr=subprocess.PIPE,timeout=compile_timeout)
   if not os.path.isfile(dir+'/'+file_name):
+    os.system("rm -rf "+dir)
     return jsonify({ "res": "CE", "exit_code": -1, "stdout": res.stdout, "stderr": res.stderr })
   exr = subprocess.run("cd "+dir+" ; "+exec_code,shell=True,input=stdin,encoding="UTF-8",stdout=subprocess.PIPE,stderr=subprocess.PIPE,timeout=exec_timeout)
+  os.system("rm -rf "+dir)
   stdout = exr.stdout
   stderr = exr.stderr
   status = "OK"

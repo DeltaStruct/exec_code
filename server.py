@@ -41,4 +41,4 @@ def exec_code():
   return jsonify({ "res": status, "exit_code": exr.returncode, "stdout": stdout, "stderr": stderr })
 
 if __name__=="__main__":
-  app.run()
+  app.run(debug=True,port=8000,threaded=True)

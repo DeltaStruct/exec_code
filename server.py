@@ -41,4 +41,16 @@ def exec_code():
   return jsonify({ "res": status, "exit_code": exr.returncode, "stdout": stdout, "stderr": stderr })
 
 if __name__=="__main__":
+  os.system("cloudflared tunnel --url \"http://localhost:8000\" > tmpinput.txt 2>&1 &")
+  while subprocess.run("grep -o \"https://.*\.trycloudflare\.com\" tmpinput.txt",stdout=subprocess.PIPE).stdout=="":
+    pass
+  with open("url.txt",mode='w') as f:
+    f.write(subprocess.run("grep -o \"https://.*\.trycloudflare\.com\" tmpinput.txt",stdout=subprocess.PIPE).stdout)
+  os.system("""
+    git config user.name "GitHub Actions"
+    git config user.email "DeltaStruct@users.noreply.github.com"
+    git add .
+    git commit -m "change url"
+    git push
+  """)
   app.run(debug=True,port=8000,threaded=True)

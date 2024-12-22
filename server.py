@@ -7,6 +7,10 @@ app = Flask("server.py")
 
 keycode = os.environ["keycode"]
 
+@app.route("/ping",methods=["POST"])
+def ping():
+  return requests.get_data()
+
 @app.route("/exec_code",methods=["POST"])
 def exec_code():
   req = request.get_json()
@@ -42,7 +46,7 @@ def exec_code():
 
 if __name__=="__main__":
   os.system("cloudflared tunnel --url \"http://localhost:8000\" > tmpinput.txt 2>&1 &")
-  while subprocess.run("grep -o \"https://.*\\.trycloudflare\\.com\" tmpinput.txt",stdout=subprocess.PIPE).stdout=="":
+  while subprocess.run("grep -o \"https://.*\\.trycloudflare\\.com\" tmpinput.txt",shell=True,stdout=subprocess.PIPE).stdout=="":
     pass
   with open("url.txt",mode='w') as f:
     f.write(subprocess.run("grep -o \"https://.*\\.trycloudflare\\.com\" tmpinput.txt",stdout=subprocess.PIPE).stdout)

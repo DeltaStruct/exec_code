@@ -28,7 +28,7 @@ def exec_code():
   with open(dir+'/'+code_name,mode='w') as f:
     f.write(code)
   res = subprocess.run("cd "+dir+" ; "+compile_code,shell=True,encoding="UTF-8",stdout=subprocess.PIPE,stderr=subprocess.PIPE,timeout=compile_timeout)
-  if !os.path.isfile(dir+'/'+file_name):
+  if not os.path.isfile(dir+'/'+file_name):
     return jsonify({ "res": "CE", "exit_code": -1, "stdout": res.stdout, "stderr": res.stderr })
   exr = subprocess.run("cd "+dir+" ; "+exec_code,shell=True,input=stdin,encoding="UTF-8",stdout=subprocess.PIPE,stderr=subprocess.PIPE,timeout=exec_timeout)
   stdout = exr.stdout

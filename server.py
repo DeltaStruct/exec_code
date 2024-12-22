@@ -9,7 +9,7 @@ keycode = os.environ["keycode"]
 
 @app.route("/ping",methods=["POST"])
 def ping():
-  return requests.get_data()
+  return request.get_data()
 
 @app.route("/exec_code",methods=["POST"])
 def exec_code():

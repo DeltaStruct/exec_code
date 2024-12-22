@@ -5,7 +5,7 @@ import os
 
 app = Flask("server.py")
 
-keycode = os.environ("keycode")
+keycode = os.environ["keycode"]
 
 @app.route("/exec_code",methods=["POST"])
 def exec_code():

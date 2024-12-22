@@ -39,7 +39,7 @@ def exec_code():
     f.write(code)
   res = subprocess.run("cd "+dir+" ; "+compile_code,shell=True,encoding="UTF-8",stdout=subprocess.PIPE,stderr=subprocess.PIPE,timeout=compile_timeout)
   if not os.path.isfile(dir+'/'+file_name):
-    return jsonify({ "res": "CE", "exit_code": -1, "stdout": res.stdout.decode(), "stderr": res.stderr.decode() })
+    return jsonify({ "res": "CE", "exit_code": -1, "stdout": res.stdout, "stderr": res.stderr })
   exr = subprocess.run("cd "+dir+" ; "+exec_code,shell=True,input=stdin,encoding="UTF-8",stdout=subprocess.PIPE,stderr=subprocess.PIPE,timeout=exec_timeout)
   stdout = exr.stdout
   stderr = exr.stderr
@@ -48,7 +48,7 @@ def exec_code():
     stdout = res.stdout+stdout
     stderr = res.stderr+stderr
     status = "RE"
-  return jsonify({ "res": status, "exit_code": exr.returncode, "stdout": stdout.decode(), "stderr": stderr.decode() })
+  return jsonify({ "res": status, "exit_code": exr.returncode, "stdout": stdout, "stderr": stderr })
 
 if __name__=="__main__":
   os.system("cloudflared tunnel --url \"http://localhost:8000\" > tmpinput.txt 2>&1 &")

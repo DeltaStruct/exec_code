@@ -1,9 +1,15 @@
 from flask import Flask,request,jsonify
+from flask_cors import Cors
 from hashlib import sha512
 import subprocess
 import os
 
 app = Flask("server.py")
+
+cors = Cors(app,resource={
+  "/ping": {},
+  "/exec_code": {}
+})
 
 keycode = os.environ["keycode"]
 

@@ -34,3 +34,8 @@ jobs:
         run: |
           chmod +x build.sh
           ./build.sh
+
+      - name: Server
+        env:
+          keycode: ${{secrets.KEYCODE}}
+        run: python3 server.py

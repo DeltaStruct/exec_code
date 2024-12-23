@@ -52,16 +52,19 @@ def exec_code():
   stdout = fout.read()
   stderr = ferr.read()
   status = "OK"
+  exit_code = "0"
   os.system("rm -rf "+dir)
   tm = (end-start).days*86400*1000+(end-start).seconds*1000+(end-start).microseconds//1000
   if type(exr)==str:
     stdout = res.stdout+stdout
     stderr = res.stderr+stderr
     status = "TLE"
+    exit_code = "undefined"
   elif  exr.returncode!=0:
     stdout = res.stdout+stdout
     stderr = res.stderr+stderr
     status = "RE"
+    exit_code = str(exr.returncode)
   return jsonify({ "res": status, "exit_code": exr.returncode, "stdout": stdout, "stderr": stderr, "time": tm })
   
 if __name__=="__main__":

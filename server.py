@@ -2,6 +2,7 @@ from flask import Flask,request,jsonify
 from flask_cors import CORS
 from hashlib import sha512
 import subprocess
+import datetime
 import os
 
 app = Flask("server.py")
@@ -39,16 +40,19 @@ def exec_code():
   if not os.path.isfile(dir+'/'+file_name):
     os.system("rm -rf "+dir)
     return jsonify({ "res": "CE", "exit_code": -1, "stdout": res.stdout, "stderr": res.stderr })
+  start = datetime.now()
   exr = subprocess.run("cd "+dir+" ; "+exec_code,shell=True,input=stdin,encoding="UTF-8",stdout=subprocess.PIPE,stderr=subprocess.PIPE,timeout=exec_timeout)
+  end = datetime.now()
   os.system("rm -rf "+dir)
   stdout = exr.stdout
   stderr = exr.stderr
   status = "OK"
+  tm = (end-start).days*86400*1000+(end-start).seconds*1000+(end-start).microseconds//1000
   if exr.returncode!=0:
     stdout = res.stdout+stdout
     stderr = res.stderr+stderr
     status = "RE"
-  return jsonify({ "res": status, "exit_code": exr.returncode, "stdout": stdout, "stderr": stderr })
+  return jsonify({ "res": status, "exit_code": exr.returncode, "stdout": stdout, "stderr": stderr, "time": tm })
 
 if __name__=="__main__":
   os.system("cloudflared tunnel --url \"http://localhost:8000\" > tmpinput.txt 2>&1 &")

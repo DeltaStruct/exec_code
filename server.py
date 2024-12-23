@@ -53,7 +53,7 @@ def exec_code():
   status = "OK"
   os.system("rm -rf "+dir)
   tm = (end-start).days*86400*1000+(end-start).seconds*1000+(end-start).microseconds//1000
-  if exr==None||exr.returncode!=0:
+  if exr==None or exr.returncode!=0:
     stdout = res.stdout+stdout
     stderr = res.stderr+stderr
     status = "RE"

@@ -49,11 +49,11 @@ def exec_code():
   except subprocess.TimeoutExpired as e:
     end = datetime.datetime.now()
     os.system("rm -rf "+dir)
-    return jsonify({ "res": "TLE", "exit_code": "undefined(killed)", "stderr": e.stderr, "time": (end-start)/timedelta(microseconds=1000) })
+    return jsonify({ "res": "TLE", "exit_code": "undefined(killed)", "stderr": e.stderr, "time": (end-start)/datetime.timedelta(microseconds=1000) })
   except Exception:
     end = datetime.datetime.now()
     os.system("rm -rf "+dir)
-    return jsonify({ "res": "IE", "stderr": "Internal Error: Unknown error.\n"+str(e), "time": (end-start)/timedelta(microseconds=1000) })
+    return jsonify({ "res": "IE", "stderr": "Internal Error: Unknown error.\n"+str(e), "time": (end-start)/datetime.timedelta(microseconds=1000) })
   stdout = exr.stdout
   stderr = exr.stderr
   status = "OK"

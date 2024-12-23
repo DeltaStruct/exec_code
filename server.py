@@ -1,7 +1,7 @@
 from flask import Flask,request,jsonify
 from flask_cors import CORS
 from hashlib import sha512
-from signal import strsignal
+from signal import Signals,strsignal
 import subprocess
 import datetime
 import os
@@ -61,7 +61,7 @@ def exec_code():
       stderr = ""
     stdout = res.stdout+stdout
     stderr = res.stderr+stderr
-    return jsonify({ "res": "TLE", "exit_code": "undefined(killed)", "stdout": stdout, "stderr": stderr, "time": (end-start)//datetime.timedelta(microseconds=1000) })
+    return jsonify({ "res": "TLE", "exit_code": "SIGKILL(Killed)", "stdout": stdout, "stderr": stderr, "time": (end-start)//datetime.timedelta(microseconds=1000) })
   except Exception:
     end = datetime.datetime.now()
     os.system("rm -rf "+dir)
@@ -76,8 +76,8 @@ def exec_code():
     stderr = res.stderr+stderr
     status = "RE"
     exit_code = exr.returncode
-    if exr.returncode<0:
-      exit_code = "undefined"+'('+strsignal(-exr.returncode)+')'
+    if exr.returncode>=128&&exr.returncode-127<=64:
+      exit_code = Signals(exr.returncode-127).name+'('+strsignal(exr.returncode-127)+')'
     else :
       exit_code = str(exr.returncode)
   elif req["debug"]=="1":

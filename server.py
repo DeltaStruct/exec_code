@@ -40,9 +40,9 @@ def exec_code():
   if not os.path.isfile(dir+'/'+file_name):
     os.system("rm -rf "+dir)
     return jsonify({ "res": "CE", "exit_code": -1, "stdout": res.stdout, "stderr": res.stderr })
-  start = datetime.now()
+  start = datetime.datetime.now()
   exr = subprocess.run("cd "+dir+" ; "+exec_code,shell=True,input=stdin,encoding="UTF-8",stdout=subprocess.PIPE,stderr=subprocess.PIPE,timeout=exec_timeout)
-  end = datetime.now()
+  end = datetime.datetime.now()
   os.system("rm -rf "+dir)
   stdout = exr.stdout
   stderr = exr.stderr

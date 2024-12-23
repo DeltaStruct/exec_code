@@ -80,7 +80,7 @@ def exec_code():
       exit_code = "undefined"+'('+strsignal(-exr.returncode)+')'
     else :
       exit_code = str(exr.returncode)
-  elif req["debug"]==1:
+  elif req["debug"]=="1":
     stdout = res.stdout+stdout
     stderr = res.stderr+stderr
   return jsonify({ "res": status, "exit_code": exit_code, "stdout": stdout, "stderr": stderr, "time": (end-start)//datetime.timedelta(microseconds=1000) })

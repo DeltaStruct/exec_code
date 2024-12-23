@@ -61,7 +61,7 @@ def exec_code():
       stderr = ""
     stdout = res.stdout+stdout
     stderr = res.stderr+stderr
-    return jsonify({ "res": "timeout", "exit_code": "undefined(killed)", "stdout": stdout, "stderr": stderr, "time": (end-start)//datetime.timedelta(microseconds=1000) })
+    return jsonify({ "res": "TLE", "exit_code": "undefined(killed)", "stdout": stdout, "stderr": stderr, "time": (end-start)//datetime.timedelta(microseconds=1000) })
   except Exception:
     end = datetime.datetime.now()
     os.system("rm -rf "+dir)
@@ -75,10 +75,14 @@ def exec_code():
     stdout = res.stdout+stdout
     stderr = res.stderr+stderr
     status = "RE"
+    exit_code = exr.returncode
     if exr.returncode<0:
       exit_code = "undefined"+'('+strsignal(-exr.returncode)+')'
     else :
       exit_code = str(exr.returncode)
+  elif req["debug"]==1:
+    stdout = res.stdout+stdout
+    stderr = res.stderr+stderr
   return jsonify({ "res": status, "exit_code": exit_code, "stdout": stdout, "stderr": stderr, "time": (end-start)//datetime.timedelta(microseconds=1000) })
   
 if __name__=="__main__":

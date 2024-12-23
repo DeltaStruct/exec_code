@@ -1,4 +1,4 @@
-from flask import Flask,request,jsonify
+tfrom flask import Flask,request,jsonify
 from flask_cors import CORS
 from hashlib import sha512
 import subprocess
@@ -41,7 +41,10 @@ def exec_code():
     os.system("rm -rf "+dir)
     return jsonify({ "res": "CE", "exit_code": -1, "stdout": res.stdout, "stderr": res.stderr })
   start = datetime.datetime.now()
-  exr = subprocess.run("cd "+dir+" ; "+exec_code,shell=True,input=stdin,encoding="UTF-8",stdout=subprocess.PIPE,stderr=subprocess.PIPE,timeout=exec_timeout)
+  try:
+    exr = subprocess.run("cd "+dir+" ; "+exec_code,shell=True,input=stdin,encoding="UTF-8",stdout=subprocess.PIPE,stderr=subprocess.PIPE,timeout=exec_timeout)
+  except Exception:
+    pass
   end = datetime.datetime.now()
   os.system("rm -rf "+dir)
   stdout = exr.stdout

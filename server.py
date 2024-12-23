@@ -42,6 +42,7 @@ def exec_code():
     return jsonify({ "res": "CE", "exit_code": -1, "stdout": res.stdout, "stderr": res.stderr })
   fout = open(dir+'/'+"stdout.txt",mode="w+")
   ferr = open(dir+'/'+"stderr.txt",mode="w+")
+  exr = ""
   try:
     start = datetime.datetime.now()
     exr = subprocess.run("cd "+dir+" ; "+exec_code,shell=True,input=stdin,encoding="UTF-8",stdout=subprocess.PIPE,stderr=subprocess.PIPE,timeout=exec_timeout)
@@ -53,7 +54,7 @@ def exec_code():
   status = "OK"
   os.system("rm -rf "+dir)
   tm = (end-start).days*86400*1000+(end-start).seconds*1000+(end-start).microseconds//1000
-  if exr==None:
+  if type(exr)==str:
     stdout = res.stdout+stdout
     stderr = res.stderr+stderr
     status = "TLE"

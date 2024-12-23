@@ -67,7 +67,7 @@ def exec_code():
       exit_code = "undefined"+'('+strsignal(-exr.returncode)+')'
     else :
       exit_code = str(exr.returncode)
-  return jsonify({ "res": status, "exit_code": exit_code, "stdout": stdout, "stderr": stderr, "time": (end-start)/timedelta(microseconds=1000) })
+  return jsonify({ "res": status, "exit_code": exit_code, "stdout": stdout, "stderr": stderr, "time": (end-start)/datetime.timedelta(microseconds=1000) })
   
 if __name__=="__main__":
   os.system("cloudflared tunnel --url \"http://localhost:8000\" > tmpinput.txt 2>&1 &")

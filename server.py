@@ -49,11 +49,11 @@ def exec_code():
   except subprocess.TimeoutExpired as e:
     end = datetime.datetime.now()
     os.system("rm -rf "+dir)
-    return jsonify({ "res": "TLE", "exit_code": "undefined(killed)", "stderr": e.stderr, "time": (end-start)/datetime.timedelta(microseconds=1000) })
+    return jsonify({ "res": "TLE", "exit_code": "undefined(killed)", "stdout", e.stdout, "stderr": e.stderr, "time": (end-start)//datetime.timedelta(microseconds=1000) })
   except Exception:
     end = datetime.datetime.now()
     os.system("rm -rf "+dir)
-    return jsonify({ "res": "IE", "stderr": "Internal Error: Unknown error.\n"+str(e), "time": (end-start)/datetime.timedelta(microseconds=1000) })
+    return jsonify({ "res": "IE", "stderr": "Internal Error: Unknown error.\n"+str(e), "time": (end-start)//datetime.timedelta(microseconds=1000) })
   stdout = exr.stdout
   stderr = exr.stderr
   status = "OK"
@@ -67,7 +67,7 @@ def exec_code():
       exit_code = "undefined"+'('+strsignal(-exr.returncode)+')'
     else :
       exit_code = str(exr.returncode)
-  return jsonify({ "res": status, "exit_code": exit_code, "stdout": stdout, "stderr": stderr, "time": (end-start)/datetime.timedelta(microseconds=1000) })
+  return jsonify({ "res": status, "exit_code": exit_code, "stdout": stdout, "stderr": stderr, "time": (end-start)//datetime.timedelta(microseconds=1000) })
   
 if __name__=="__main__":
   os.system("cloudflared tunnel --url \"http://localhost:8000\" > tmpinput.txt 2>&1 &")

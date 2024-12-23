@@ -1,6 +1,7 @@
 from flask import Flask,request,jsonify
 from flask_cors import CORS
 from hashlib import sha512
+from signal import strsignal
 import subprocess
 import datetime
 import os
@@ -40,32 +41,33 @@ def exec_code():
   if not os.path.isfile(dir+'/'+file_name):
     os.system("rm -rf "+dir)
     return jsonify({ "res": "CE", "exit_code": -1, "stdout": res.stdout, "stderr": res.stderr })
-  fout = open(dir+'/'+"stdout.txt",mode="w+")
-  ferr = open(dir+'/'+"stderr.txt",mode="w+")
   exr = ""
   try:
     start = datetime.datetime.now()
     exr = subprocess.run("cd "+dir+" ; "+exec_code,shell=True,input=stdin,encoding="UTF-8",stdout=subprocess.PIPE,stderr=subprocess.PIPE,timeout=exec_timeout)
+    end = datetime.datetime.now()
+  except subprocess.TimeoutExpired as e:
+    end = datetime.datetime.now()
+    os.system("rm -rf "+dir)
+    return jsonify({ "res": "TLE", "exit_code": "undefined(killed)", "stderr": e.stderr, "time": (end-start)/timedelta(microseconds=1000) })
   except Exception:
-    pass
-  end = datetime.datetime.now()
-  stdout = fout.read()
-  stderr = ferr.read()
+    end = datetime.datetime.now()
+    os.system("rm -rf "+dir)
+    return jsonify({ "res": "IE", "stderr": "Internal Error: Unknown error.\n"+str(e), "time": (end-start)/timedelta(microseconds=1000) })
+  stdout = exr.stdout
+  stderr = exr.stderr
   status = "OK"
   exit_code = "0"
   os.system("rm -rf "+dir)
-  tm = (end-start).days*86400*1000+(end-start).seconds*1000+(end-start).microseconds//1000
-  if type(exr)==str:
-    stdout = res.stdout+stdout
-    stderr = res.stderr+stderr
-    status = "TLE"
-    exit_code = "undefined"
-  elif  exr.returncode!=0:
+  if exr.returncode!=0:
     stdout = res.stdout+stdout
     stderr = res.stderr+stderr
     status = "RE"
-    exit_code = str(exr.returncode)
-  return jsonify({ "res": status, "exit_code": exr.returncode, "stdout": stdout, "stderr": stderr, "time": tm })
+    if exr.returncode<0:
+      exit_code = "undefined"+'('+strsignal(-exr.returncode)+')'
+    else :
+      exit_code = str(exr.returncode)
+  return jsonify({ "res": status, "exit_code": exit_code, "stdout": stdout, "stderr": stderr, "time": (end-start)/timedelta(microseconds=1000) })
   
 if __name__=="__main__":
   os.system("cloudflared tunnel --url \"http://localhost:8000\" > tmpinput.txt 2>&1 &")

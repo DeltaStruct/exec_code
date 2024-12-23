@@ -76,7 +76,7 @@ def exec_code():
     stderr = res.stderr+stderr
     status = "RE"
     exit_code = exr.returncode
-    if exr.returncode>=128&&exr.returncode-127<=64:
+    if exr.returncode>=128 and exr.returncode-127<=64:
       exit_code = Signals(exr.returncode-127).name+'('+strsignal(exr.returncode-127)+')'
     else :
       exit_code = str(exr.returncode)

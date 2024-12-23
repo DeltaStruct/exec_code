@@ -76,8 +76,8 @@ def exec_code():
     stderr = res.stderr+stderr
     status = "RE"
     exit_code = exr.returncode
-    if exr.returncode>=128 and exr.returncode-127<=64:
-      exit_code = Signals(exr.returncode-127).name+'('+strsignal(exr.returncode-127)+')'
+    if exr.returncode>128 and exr.returncode-128<=64:
+      exit_code = Signals(exr.returncode-128).name+'('+strsignal(exr.returncode-128)+')'
     else :
       exit_code = str(exr.returncode)
   elif req["debug"]=="1":

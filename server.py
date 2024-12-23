@@ -49,7 +49,7 @@ def exec_code():
   except subprocess.TimeoutExpired as e:
     end = datetime.datetime.now()
     os.system("rm -rf "+dir)
-    return jsonify({ "res": "TLE", "exit_code": "undefined(killed)", "stdout": e.stdout, "stderr": e.stderr, "time": (end-start)//datetime.timedelta(microseconds=1000) })
+    return jsonify({ "res": "TLE", "exit_code": "undefined(killed)", "stdout": e.stdout.decode(), "stderr": e.stderr.decode(), "time": (end-start)//datetime.timedelta(microseconds=1000) })
   except Exception:
     end = datetime.datetime.now()
     os.system("rm -rf "+dir)

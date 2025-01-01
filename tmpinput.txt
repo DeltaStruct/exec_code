@@ -1,12 +1,12 @@
-2024-12-31T20:18:30Z INF Thank you for trying Cloudflare Tunnel. Doing so, without a Cloudflare account, is a quick way to experiment and try it out. However, be aware that these account-less Tunnels have no uptime guarantee, are subject to the Cloudflare Online Services Terms of Use (https://www.cloudflare.com/website-terms/), and Cloudflare reserves the right to investigate your use of Tunnels for violations of such terms. If you intend to use Tunnels in production you should use a pre-created named tunnel by following: https://developers.cloudflare.com/cloudflare-one/connections/connect-apps
-2024-12-31T20:18:30Z INF Requesting new quick Tunnel on trycloudflare.com...
-2024-12-31T20:18:33Z INF +--------------------------------------------------------------------------------------------+
-2024-12-31T20:18:33Z INF |  Your quick Tunnel has been created! Visit it at (it may take some time to be reachable):  |
-2024-12-31T20:18:33Z INF |  https://study-mental-coalition-neither.trycloudflare.com                                  |
-2024-12-31T20:18:33Z INF +--------------------------------------------------------------------------------------------+
-2024-12-31T20:18:33Z INF Cannot determine default configuration path. No file [config.yml config.yaml] in [~/.cloudflared ~/.cloudflare-warp ~/cloudflare-warp /etc/cloudflared /usr/local/etc/cloudflared]
-2024-12-31T20:18:33Z INF Version 2024.12.2 (Checksum 5237675a5e806120729acc78c5be02f9db5f406717699587abfa72b49b39fe40)
-2024-12-31T20:18:33Z INF GOOS: linux, GOVersion: go1.22.5, GoArch: amd64
-2024-12-31T20:18:33Z INF Settings: map[ha-connections:1 protocol:quic url:http://localhost:8000]
-2024-12-31T20:18:33Z INF cloudflared will not automatically update if installed by a package manager.
-2024-12-31T20:18:33Z INF Generated Connector ID: 6127bcf8-edac-4647-b9c6-177340464cf7
+2025-01-01T01:16:09Z INF Thank you for trying Cloudflare Tunnel. Doing so, without a Cloudflare account, is a quick way to experiment and try it out. However, be aware that these account-less Tunnels have no uptime guarantee, are subject to the Cloudflare Online Services Terms of Use (https://www.cloudflare.com/website-terms/), and Cloudflare reserves the right to investigate your use of Tunnels for violations of such terms. If you intend to use Tunnels in production you should use a pre-created named tunnel by following: https://developers.cloudflare.com/cloudflare-one/connections/connect-apps
+2025-01-01T01:16:09Z INF Requesting new quick Tunnel on trycloudflare.com...
+2025-01-01T01:16:12Z INF +--------------------------------------------------------------------------------------------+
+2025-01-01T01:16:12Z INF |  Your quick Tunnel has been created! Visit it at (it may take some time to be reachable):  |
+2025-01-01T01:16:12Z INF |  https://adolescent-jungle-generations-health.trycloudflare.com                            |
+2025-01-01T01:16:12Z INF +--------------------------------------------------------------------------------------------+
+2025-01-01T01:16:12Z INF Cannot determine default configuration path. No file [config.yml config.yaml] in [~/.cloudflared ~/.cloudflare-warp ~/cloudflare-warp /etc/cloudflared /usr/local/etc/cloudflared]
+2025-01-01T01:16:12Z INF Version 2024.12.2 (Checksum 5237675a5e806120729acc78c5be02f9db5f406717699587abfa72b49b39fe40)
+2025-01-01T01:16:12Z INF GOOS: linux, GOVersion: go1.22.5, GoArch: amd64
+2025-01-01T01:16:12Z INF Settings: map[ha-connections:1 protocol:quic url:http://localhost:8000]
+2025-01-01T01:16:12Z INF cloudflared will not automatically update if installed by a package manager.
+2025-01-01T01:16:12Z INF Generated Connector ID: a7764d2d-f9e9-43c4-9e59-2ba76bdcbe5b

@@ -5,6 +5,4 @@ curl -L https://github.com/cloudflare/cloudflared/releases/latest/download/cloud
 sudo apt install "./cloudflared.deb"
 rm "cloudflared.deb"
 git clone https://github.com/atcoder/ac-library.git
-export CPLUS_INCLUDE_PATH="$CPLUS_INCLUDE_PATH:"pwd"/ac-library"
-echo 'export CPLUS_INCLUDE_PATH="$CPLUS_INCLUDE_PATH:"pwd"/ac-library"\n' >> ~/.bash_profile
-echo 'export CPLUS_INCLUDE_PATH="$CPLUS_INCLUDE_PATH:"pwd"/ac-library"\n' >> ~/.bashrc
+mv ac-library/atcoder /usr/local/include

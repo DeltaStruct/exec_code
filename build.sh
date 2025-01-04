@@ -6,3 +6,4 @@ sudo apt install "./cloudflared.deb"
 rm "cloudflared.deb"
 git clone https://github.com/atcoder/ac-library.git
 mv ac-library/atcoder /usr/local/include
+rm -r ac-library

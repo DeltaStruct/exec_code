@@ -83,11 +83,12 @@ def exec_code():
   elif req["debug"]=="1":
     stdout = res.stdout+stdout
     stderr = res.stderr+stderr
-  if len(stdout)>4096*10240:
-    stdout = stdout[:4096*10240]
+  length_error = 524288 # = 512KiB to Byte
+  if len(stdout)>length_error:
+    stdout = stdout[:length_error]
     exit_code = Signals(25).name+'('+strsignal(25)+')'
-  if len(stderr)>4096*10240:
-    stderr = stderr[:4096*10240]
+  if len(stderr)>length_error:
+    stderr = stderr[:length_error]
     exit_code = Signals(25).name+'('+strsignal(25)+')'
   return jsonify({ "res": status, "exit_code": exit_code, "stdout": stdout, "stderr": stderr, "time": (end-start)//datetime.timedelta(microseconds=1000) })
   

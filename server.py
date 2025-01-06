@@ -83,6 +83,12 @@ def exec_code():
   elif req["debug"]=="1":
     stdout = res.stdout+stdout
     stderr = res.stderr+stderr
+  if len(stdout)>4096*10240:
+    stdout = stdout[:4096*10240]
+    exit_code = Signals(25).name+'('+strsignal(25)+')'
+  if len(stderr)>4096*10240:
+    stderr = stderr[:4096*10240]
+    exit_code = Signals(25).name+'('+strsignal(25)+')'
   return jsonify({ "res": status, "exit_code": exit_code, "stdout": stdout, "stderr": stderr, "time": (end-start)//datetime.timedelta(microseconds=1000) })
   
 if __name__=="__main__":

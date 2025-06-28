@@ -8,3 +8,5 @@ rm "cloudflared.deb"
 git clone https://github.com/atcoder/ac-library.git
 sudo mv ac-library/atcoder /usr/local/include
 rm -r ac-library
+chmod +x gch_command.sh
+./gch_command.sh

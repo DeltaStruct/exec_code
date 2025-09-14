@@ -1,1 +1,1 @@
-https://satisfactory-cheats-marilyn-gauge.trycloudflare.com
+https://developers.cloudflare.com/workers/observability/errors/" target="_blank">Workers - Errors and Exceptions</a> and check Workers Logs for api.trycloudflare.com

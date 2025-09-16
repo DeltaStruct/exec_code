@@ -1,17 +1,11 @@
-2025-09-15T20:19:09Z INF Thank you for trying Cloudflare Tunnel. Doing so, without a Cloudflare account, is a quick way to experiment and try it out. However, be aware that these account-less Tunnels have no uptime guarantee, are subject to the Cloudflare Online Services Terms of Use (https://www.cloudflare.com/website-terms/), and Cloudflare reserves the right to investigate your use of Tunnels for violations of such terms. If you intend to use Tunnels in production you should use a pre-created named tunnel by following: https://developers.cloudflare.com/cloudflare-one/connections/connect-apps
-2025-09-15T20:19:09Z INF Requesting new quick Tunnel on trycloudflare.com...
-2025-09-15T20:19:12Z INF +--------------------------------------------------------------------------------------------+
-2025-09-15T20:19:12Z INF |  Your quick Tunnel has been created! Visit it at (it may take some time to be reachable):  |
-2025-09-15T20:19:12Z INF |  https://drum-petersburg-convertible-laugh.trycloudflare.com                               |
-2025-09-15T20:19:12Z INF +--------------------------------------------------------------------------------------------+
-2025-09-15T20:19:12Z INF Cannot determine default configuration path. No file [config.yml config.yaml] in [~/.cloudflared ~/.cloudflare-warp ~/cloudflare-warp /etc/cloudflared /usr/local/etc/cloudflared]
-2025-09-15T20:19:12Z INF Version 2025.8.1 (Checksum a66353004197ee4c1fcb68549203824882bba62378ad4d00d234bdb8251f1114)
-2025-09-15T20:19:12Z INF GOOS: linux, GOVersion: go1.24.4, GoArch: amd64
-2025-09-15T20:19:12Z INF Settings: map[ha-connections:1 protocol:quic url:http://localhost:8000]
-2025-09-15T20:19:12Z INF cloudflared will not automatically update if installed by a package manager.
-2025-09-15T20:19:12Z INF Generated Connector ID: 4ffe2876-1633-4c41-b022-1c021c4e9702
-2025-09-15T20:19:12Z INF Initial protocol quic
-2025-09-15T20:19:12Z INF ICMP proxy will use 10.1.0.73 as source for IPv4
-2025-09-15T20:19:12Z INF ICMP proxy will use fe80::7eed:8dff:fe3b:febe in zone eth0 as source for IPv6
-2025-09-15T20:19:12Z WRN The user running cloudflared process has a GID (group ID) that is not within ping_group_range. You might need to add that user to a group within that range, or instead update the range to encompass a group the user is already in by modifying /proc/sys/net/ipv4/ping_group_range. Otherwise cloudflared will not be able to ping this network error="Group ID 1001 is not between ping group 1 to 0"
-2025-09-15T20:19:12Z WRN ICMP proxy feature is disabled error="cannot create ICMPv4 proxy: Group ID 1001 is not between ping group 1 to 0 nor ICMPv6 proxy: socket: permission denied"
+2025-09-16T01:15:23Z INF Thank you for trying Cloudflare Tunnel. Doing so, without a Cloudflare account, is a quick way to experiment and try it out. However, be aware that these account-less Tunnels have no uptime guarantee, are subject to the Cloudflare Online Services Terms of Use (https://www.cloudflare.com/website-terms/), and Cloudflare reserves the right to investigate your use of Tunnels for violations of such terms. If you intend to use Tunnels in production you should use a pre-created named tunnel by following: https://developers.cloudflare.com/cloudflare-one/connections/connect-apps
+2025-09-16T01:15:23Z INF Requesting new quick Tunnel on trycloudflare.com...
+2025-09-16T01:15:25Z INF +--------------------------------------------------------------------------------------------+
+2025-09-16T01:15:25Z INF |  Your quick Tunnel has been created! Visit it at (it may take some time to be reachable):  |
+2025-09-16T01:15:25Z INF |  https://selling-responsibility-void-eminem.trycloudflare.com                              |
+2025-09-16T01:15:25Z INF +--------------------------------------------------------------------------------------------+
+2025-09-16T01:15:25Z INF Cannot determine default configuration path. No file [config.yml config.yaml] in [~/.cloudflared ~/.cloudflare-warp ~/cloudflare-warp /etc/cloudflared /usr/local/etc/cloudflared]
+2025-09-16T01:15:25Z INF Version 2025.8.1 (Checksum a66353004197ee4c1fcb68549203824882bba62378ad4d00d234bdb8251f1114)
+2025-09-16T01:15:25Z INF GOOS: linux, GOVersion: go1.24.4, GoArch: amd64
+2025-09-16T01:15:25Z INF Settings: map[ha-connections:1 protocol:quic url:http://localhost:8000]
+2025-09-16T01:15:25Z INF cloudflared will not automatically update if installed by a package manager.

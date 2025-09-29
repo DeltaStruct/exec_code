@@ -1,1 +1,1 @@
-https://developers.cloudflare.com/workers/observability/errors/" target="_blank">Workers - Errors and Exceptions</a> and check Workers Logs for api.trycloudflare.com
+https://surname-seasonal-battle-forums.trycloudflare.com

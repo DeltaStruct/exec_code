@@ -1,17 +1,18 @@
-2025-11-02T05:16:42Z INF Thank you for trying Cloudflare Tunnel. Doing so, without a Cloudflare account, is a quick way to experiment and try it out. However, be aware that these account-less Tunnels have no uptime guarantee, are subject to the Cloudflare Online Services Terms of Use (https://www.cloudflare.com/website-terms/), and Cloudflare reserves the right to investigate your use of Tunnels for violations of such terms. If you intend to use Tunnels in production you should use a pre-created named tunnel by following: https://developers.cloudflare.com/cloudflare-one/connections/connect-apps
-2025-11-02T05:16:42Z INF Requesting new quick Tunnel on trycloudflare.com...
-2025-11-02T05:16:46Z INF +--------------------------------------------------------------------------------------------+
-2025-11-02T05:16:46Z INF |  Your quick Tunnel has been created! Visit it at (it may take some time to be reachable):  |
-2025-11-02T05:16:46Z INF |  https://whole-photographs-levels-fog.trycloudflare.com                                    |
-2025-11-02T05:16:46Z INF +--------------------------------------------------------------------------------------------+
-2025-11-02T05:16:46Z INF Cannot determine default configuration path. No file [config.yml config.yaml] in [~/.cloudflared ~/.cloudflare-warp ~/cloudflare-warp /etc/cloudflared /usr/local/etc/cloudflared]
-2025-11-02T05:16:46Z INF Version 2025.10.1 (Checksum bf5382fa25766c532a23788491ccef4e3ac9ed488318124e7f58ee0865277c4f)
-2025-11-02T05:16:46Z INF GOOS: linux, GOVersion: go1.24.9, GoArch: amd64
-2025-11-02T05:16:46Z INF Settings: map[ha-connections:1 protocol:quic url:http://localhost:8000]
-2025-11-02T05:16:46Z INF cloudflared will not automatically update if installed by a package manager.
-2025-11-02T05:16:46Z INF Generated Connector ID: bc24dbb8-9556-436f-828a-2a2e0bb51cf0
-2025-11-02T05:16:46Z INF Initial protocol quic
-2025-11-02T05:16:46Z INF ICMP proxy will use 10.1.0.196 as source for IPv4
-2025-11-02T05:16:46Z INF ICMP proxy will use fe80::222:48ff:fe09:762 in zone eth0 as source for IPv6
-2025-11-02T05:16:46Z WRN The user running cloudflared process has a GID (group ID) that is not within ping_group_range. You might need to add that user to a group within that range, or instead update the range to encompass a group the user is already in by modifying /proc/sys/net/ipv4/ping_group_range. Otherwise cloudflared will not be able to ping this network error="Group ID 1001 is not between ping group 1 to 0"
-2025-11-02T05:16:46Z WRN ICMP proxy feature is disabled error="cannot create ICMPv4 proxy: Group ID 1001 is not between ping group 1 to 0 nor ICMPv6 proxy: socket: permission denied"
+2025-11-02T05:16:47Z INF Thank you for trying Cloudflare Tunnel. Doing so, without a Cloudflare account, is a quick way to experiment and try it out. However, be aware that these account-less Tunnels have no uptime guarantee, are subject to the Cloudflare Online Services Terms of Use (https://www.cloudflare.com/website-terms/), and Cloudflare reserves the right to investigate your use of Tunnels for violations of such terms. If you intend to use Tunnels in production you should use a pre-created named tunnel by following: https://developers.cloudflare.com/cloudflare-one/connections/connect-apps
+2025-11-02T05:16:47Z INF Requesting new quick Tunnel on trycloudflare.com...
+2025-11-02T05:16:49Z INF +--------------------------------------------------------------------------------------------+
+2025-11-02T05:16:49Z INF |  Your quick Tunnel has been created! Visit it at (it may take some time to be reachable):  |
+2025-11-02T05:16:49Z INF |  https://elected-civic-recipient-picked.trycloudflare.com                                  |
+2025-11-02T05:16:49Z INF +--------------------------------------------------------------------------------------------+
+2025-11-02T05:16:49Z INF Cannot determine default configuration path. No file [config.yml config.yaml] in [~/.cloudflared ~/.cloudflare-warp ~/cloudflare-warp /etc/cloudflared /usr/local/etc/cloudflared]
+2025-11-02T05:16:49Z INF Version 2025.10.1 (Checksum bf5382fa25766c532a23788491ccef4e3ac9ed488318124e7f58ee0865277c4f)
+2025-11-02T05:16:49Z INF GOOS: linux, GOVersion: go1.24.9, GoArch: amd64
+2025-11-02T05:16:49Z INF Settings: map[ha-connections:1 protocol:quic url:http://localhost:8000]
+2025-11-02T05:16:49Z INF cloudflared will not automatically update if installed by a package manager.
+2025-11-02T05:16:49Z INF Generated Connector ID: d2096fe7-66fe-40d4-9c39-f3eb829332cb
+2025-11-02T05:16:49Z INF Initial protocol quic
+2025-11-02T05:16:49Z INF ICMP proxy will use 10.1.0.196 as source for IPv4
+2025-11-02T05:16:49Z INF ICMP proxy will use fe80::222:48ff:fe09:762 in zone eth0 as source for IPv6
+2025-11-02T05:16:49Z WRN The user running cloudflared process has a GID (group ID) that is not within ping_group_range. You might need to add that user to a group within that range, or instead update the range to encompass a group the user is already in by modifying /proc/sys/net/ipv4/ping_group_range. Otherwise cloudflared will not be able to ping this network error="Group ID 1001 is not between ping group 1 to 0"
+2025-11-02T05:16:49Z WRN ICMP proxy feature is disabled error="cannot create ICMPv4 proxy: Group ID 1001 is not between ping group 1 to 0 nor ICMPv6 proxy: socket: permission denied"
+2025-11-02T05:16:49Z ERR Cannot determine default origin certificate path. No file cert.pem in [~/.cloudflared ~/.cloudflare-warp ~/cloudflare-warp /etc/cloudflared /usr/local/etc/cloudflared]. You need to specify the origin certificate path by specifying the origincert option in the configuration file, or set TUNNEL_ORIGIN_CERT environment variable originCertPath=

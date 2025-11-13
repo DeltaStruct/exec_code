@@ -1,1 +1,1 @@
-https://sunglasses-arlington-metres-invest.trycloudflare.com
+https://api.trycloudflare.com

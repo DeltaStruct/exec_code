@@ -1,24 +1,11 @@
-2025-11-28T05:18:42Z INF Thank you for trying Cloudflare Tunnel. Doing so, without a Cloudflare account, is a quick way to experiment and try it out. However, be aware that these account-less Tunnels have no uptime guarantee, are subject to the Cloudflare Online Services Terms of Use (https://www.cloudflare.com/website-terms/), and Cloudflare reserves the right to investigate your use of Tunnels for violations of such terms. If you intend to use Tunnels in production you should use a pre-created named tunnel by following: https://developers.cloudflare.com/cloudflare-one/connections/connect-apps
-2025-11-28T05:18:42Z INF Requesting new quick Tunnel on trycloudflare.com...
-2025-11-28T05:18:44Z INF +--------------------------------------------------------------------------------------------+
-2025-11-28T05:18:44Z INF |  Your quick Tunnel has been created! Visit it at (it may take some time to be reachable):  |
-2025-11-28T05:18:44Z INF |  https://editorial-sheep-invest-somebody.trycloudflare.com                                 |
-2025-11-28T05:18:44Z INF +--------------------------------------------------------------------------------------------+
-2025-11-28T05:18:45Z INF Cannot determine default configuration path. No file [config.yml config.yaml] in [~/.cloudflared ~/.cloudflare-warp ~/cloudflare-warp /etc/cloudflared /usr/local/etc/cloudflared]
-2025-11-28T05:18:45Z INF Version 2025.11.1 (Checksum 83ea55259e419549817460d0c097f23ad1327364d0a63fab2c5463b9283251cb)
-2025-11-28T05:18:45Z INF GOOS: linux, GOVersion: go1.24.9, GoArch: amd64
-2025-11-28T05:18:45Z INF Settings: map[ha-connections:1 protocol:quic url:http://localhost:8000]
-2025-11-28T05:18:45Z INF cloudflared will not automatically update if installed by a package manager.
-2025-11-28T05:18:45Z INF Generated Connector ID: aacc0cb2-59ac-43fc-8e8e-cc8aa420301a
-2025-11-28T05:18:45Z INF Initial protocol quic
-2025-11-28T05:18:45Z INF ICMP proxy will use 10.1.0.125 as source for IPv4
-2025-11-28T05:18:45Z INF ICMP proxy will use fe80::7eed:8dff:fe7d:4a93 in zone eth0 as source for IPv6
-2025-11-28T05:18:45Z WRN The user running cloudflared process has a GID (group ID) that is not within ping_group_range. You might need to add that user to a group within that range, or instead update the range to encompass a group the user is already in by modifying /proc/sys/net/ipv4/ping_group_range. Otherwise cloudflared will not be able to ping this network error="Group ID 1001 is not between ping group 1 to 0"
-2025-11-28T05:18:45Z WRN ICMP proxy feature is disabled error="cannot create ICMPv4 proxy: Group ID 1001 is not between ping group 1 to 0 nor ICMPv6 proxy: socket: permission denied"
-2025-11-28T05:18:45Z ERR Cannot determine default origin certificate path. No file cert.pem in [~/.cloudflared ~/.cloudflare-warp ~/cloudflare-warp /etc/cloudflared /usr/local/etc/cloudflared]. You need to specify the origin certificate path by specifying the origincert option in the configuration file, or set TUNNEL_ORIGIN_CERT environment variable originCertPath=
-2025-11-28T05:18:45Z INF ICMP proxy will use 10.1.0.125 as source for IPv4
-2025-11-28T05:18:45Z INF ICMP proxy will use fe80::7eed:8dff:fe7d:4a93 in zone eth0 as source for IPv6
-2025-11-28T05:18:45Z INF Starting metrics server on 127.0.0.1:20242/metrics
-2025-11-28T05:18:45Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.43
-2025/11/28 05:18:45 failed to sufficiently increase receive buffer size (was: 1024 kiB, wanted: 7168 kiB, got: 2048 kiB). See https://github.com/quic-go/quic-go/wiki/UDP-Buffer-Sizes for details.
-2025-11-28T05:18:42Z INF Registered tunnel connection connIndex=0 connection=54438e59-466a-440b-8989-df67080d5fcc event=0 ip=198.41.192.67 location=ord10 protocol=quic
+2025-11-28T10:20:00Z INF Thank you for trying Cloudflare Tunnel. Doing so, without a Cloudflare account, is a quick way to experiment and try it out. However, be aware that these account-less Tunnels have no uptime guarantee, are subject to the Cloudflare Online Services Terms of Use (https://www.cloudflare.com/website-terms/), and Cloudflare reserves the right to investigate your use of Tunnels for violations of such terms. If you intend to use Tunnels in production you should use a pre-created named tunnel by following: https://developers.cloudflare.com/cloudflare-one/connections/connect-apps
+2025-11-28T10:20:00Z INF Requesting new quick Tunnel on trycloudflare.com...
+2025-11-28T10:20:09Z INF +--------------------------------------------------------------------------------------------+
+2025-11-28T10:20:09Z INF |  Your quick Tunnel has been created! Visit it at (it may take some time to be reachable):  |
+2025-11-28T10:20:09Z INF |  https://carpet-slowly-nashville-foam.trycloudflare.com                                    |
+2025-11-28T10:20:09Z INF +--------------------------------------------------------------------------------------------+
+2025-11-28T10:20:09Z INF Cannot determine default configuration path. No file [config.yml config.yaml] in [~/.cloudflared ~/.cloudflare-warp ~/cloudflare-warp /etc/cloudflared /usr/local/etc/cloudflared]
+2025-11-28T10:20:09Z INF Version 2025.11.1 (Checksum 83ea55259e419549817460d0c097f23ad1327364d0a63fab2c5463b9283251cb)
+2025-11-28T10:20:09Z INF GOOS: linux, GOVersion: go1.24.9, GoArch: amd64
+2025-11-28T10:20:09Z INF Settings: map[ha-connections:1 protocol:quic url:http://localhost:8000]
+2025-11-28T10:20:09Z INF cloudflared will not automatically update if installed by a package manager.

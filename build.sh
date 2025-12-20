@@ -5,7 +5,7 @@ tar xvf gcc-15.2.0.tar.gz
 cd gcc-releases-gcc-15.2.0
 ./contrib/download_prerequisites
 ./configure --enable-languages=c,c++ --prefix=/usr/local --disable-bootstrap --disable-multilib
-make
+make > /dev/null
 g++ --version
 g++-15 --version
 pip3 install flask

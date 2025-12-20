@@ -4,8 +4,11 @@ wget https://github.com/gcc-mirror/gcc/archive/refs/tags/releases/gcc-15.2.0.tar
 tar xvf gcc-15.2.0.tar.gz
 cd gcc-releases-gcc-15.2.0
 ./contrib/download_prerequisites
-./configure --enable-languages=c,c++ --prefix=/usr/local --disable-bootstrap --disable-multilib
+./configure --enable-languages=c,c++ --prefix=/usr/local/gcc-15.2.0 --disable-bootstrap --disable-multilib
 make > /dev/null
+sudo make install > /dev/null
+sudo ln -fs /usr/local/gcc-15.2.0/bin/g++ /usr/bin/g++-15.2.0
+sudo ln -fs /usr/local/gcc-15.2.0/bin/gcc /usr/bin/gcc-15.2.0
 g++ --version
 g++-15 --version
 pip3 install flask

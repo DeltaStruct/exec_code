@@ -10,6 +10,7 @@ sudo make install > /dev/null
 sudo ln -fs /usr/local/gcc-15.2.0/bin/g++ /usr/bin/g++-15.2.0
 sudo ln -fs /usr/local/gcc-15.2.0/bin/gcc /usr/bin/gcc-15.2.0
 cd ..
+rm -r gcc-releases-gcc-15.2.0 > /dev/null
 g++ --version
 g++-15.2.0 --version
 pip3 install flask

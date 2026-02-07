@@ -1,1 +1,1 @@
-https://hrs-export-silicon-gotten.trycloudflare.com
+https://api.trycloudflare.com

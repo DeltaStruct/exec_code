@@ -1,12 +1,12 @@
-2026-05-10T03:28:36Z INF Thank you for trying Cloudflare Tunnel. Doing so, without a Cloudflare account, is a quick way to experiment and try it out. However, be aware that these account-less Tunnels have no uptime guarantee, are subject to the Cloudflare Online Services Terms of Use (https://www.cloudflare.com/website-terms/), and Cloudflare reserves the right to investigate your use of Tunnels for violations of such terms. If you intend to use Tunnels in production you should use a pre-created named tunnel by following: https://developers.cloudflare.com/cloudflare-one/connections/connect-apps
-2026-05-10T03:28:36Z INF Requesting new quick Tunnel on trycloudflare.com...
-2026-05-10T03:28:39Z INF +--------------------------------------------------------------------------------------------+
-2026-05-10T03:28:39Z INF |  Your quick Tunnel has been created! Visit it at (it may take some time to be reachable):  |
-2026-05-10T03:28:39Z INF |  https://soviet-hop-characterization-taxes.trycloudflare.com                               |
-2026-05-10T03:28:39Z INF +--------------------------------------------------------------------------------------------+
-2026-05-10T03:28:39Z INF Cannot determine default configuration path. No file [config.yml config.yaml] in [~/.cloudflared ~/.cloudflare-warp ~/cloudflare-warp /etc/cloudflared /usr/local/etc/cloudflared]
-2026-05-10T03:28:39Z INF Version 2026.3.0 (Checksum 4a9e50e6d6d798e90fcd01933151a90bf7edd99a0a55c28ad18f2e16263a5c30)
-2026-05-10T03:28:39Z INF GOOS: linux, GOVersion: go1.24.13, GoArch: amd64
-2026-05-10T03:28:39Z INF Settings: map[ha-connections:1 protocol:quic url:http://localhost:8000]
-2026-05-10T03:28:39Z INF cloudflared will not automatically update if installed by a package manager.
-2026-05-10T03:28:39Z INF Generated Connector ID: 56c3c3d3-a6ae-4d0c-a014-6912ee34283e
+2026-05-10T08:07:11Z INF Thank you for trying Cloudflare Tunnel. Doing so, without a Cloudflare account, is a quick way to experiment and try it out. However, be aware that these account-less Tunnels have no uptime guarantee, are subject to the Cloudflare Online Services Terms of Use (https://www.cloudflare.com/website-terms/), and Cloudflare reserves the right to investigate your use of Tunnels for violations of such terms. If you intend to use Tunnels in production you should use a pre-created named tunnel by following: https://developers.cloudflare.com/cloudflare-one/connections/connect-apps
+2026-05-10T08:07:11Z INF Requesting new quick Tunnel on trycloudflare.com...
+2026-05-10T08:07:14Z INF +--------------------------------------------------------------------------------------------+
+2026-05-10T08:07:14Z INF |  Your quick Tunnel has been created! Visit it at (it may take some time to be reachable):  |
+2026-05-10T08:07:14Z INF |  https://experience-educational-fired-does.trycloudflare.com                               |
+2026-05-10T08:07:14Z INF +--------------------------------------------------------------------------------------------+
+2026-05-10T08:07:14Z INF Cannot determine default configuration path. No file [config.yml config.yaml] in [~/.cloudflared ~/.cloudflare-warp ~/cloudflare-warp /etc/cloudflared /usr/local/etc/cloudflared]
+2026-05-10T08:07:14Z INF Version 2026.3.0 (Checksum 4a9e50e6d6d798e90fcd01933151a90bf7edd99a0a55c28ad18f2e16263a5c30)
+2026-05-10T08:07:14Z INF GOOS: linux, GOVersion: go1.24.13, GoArch: amd64
+2026-05-10T08:07:14Z INF Settings: map[ha-connections:1 protocol:quic url:http://localhost:8000]
+2026-05-10T08:07:14Z INF cloudflared will not automatically update if installed by a package manager.
+2026-05-10T08:07:14Z INF Generated Connector ID: d8dbc201-2a2d-4e88-8cb9-eba455f028c6

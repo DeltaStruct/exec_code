@@ -1,1 +1,1 @@
-https://talent-supplied-faced-calibration.trycloudflare.com
+https://api.trycloudflare.com

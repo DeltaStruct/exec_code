@@ -1,1 +1,1 @@
-https://api.trycloudflare.com
+https://true-murray-tracker-bone.trycloudflare.com

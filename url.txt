@@ -1,1 +1,1 @@
-https://ballot-toner-guitar-released.trycloudflare.com
+https://api.trycloudflare.com

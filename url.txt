@@ -1,1 +1,1 @@
-https://treasurer-growing-server-characterization.trycloudflare.com
+https://api.trycloudflare.com
